@@ -2,6 +2,9 @@
 """Utility functions for the engines
 
 """
+
+from __future__ import annotations
+
 import re
 import importlib
 import importlib.util
@@ -329,29 +332,6 @@ def dict_subset(dictionary: MutableMapping, properties: Set[str]) -> Dict:
     return {k: dictionary[k] for k in properties if k in dictionary}
 
 
-def get_torrent_size(filesize: str, filesize_multiplier: str) -> Optional[int]:
-    """
-
-    Args:
-        * filesize (str): size
-        * filesize_multiplier (str): TB, GB, .... TiB, GiB...
-
-    Returns:
-        * int: number of bytes
-
-    Example:
-        >>> get_torrent_size('5', 'GB')
-        5368709120
-        >>> get_torrent_size('3.14', 'MiB')
-        3140000
-    """
-    try:
-        multiplier = _STORAGE_UNIT_VALUE.get(filesize_multiplier, 1)
-        return int(float(filesize) * multiplier)
-    except ValueError:
-        return None
-
-
 def humanize_bytes(size, precision=2):
     """Determine the *human readable* value of bytes on 1024 base (1KB=1024B)."""
     s = ['B ', 'KB', 'MB', 'GB', 'TB']
@@ -369,6 +349,35 @@ def convert_str_to_int(number_str: str) -> int:
     if number_str.isdigit():
         return int(number_str)
     return 0
+
+
+def extr(txt: str, begin: str, end: str, default: str = ""):
+    """Extract the string between ``begin`` and ``end`` from ``txt``
+
+    :param txt:     String to search in
+    :param begin:   First string to be searched for
+    :param end:     Second string to be searched for after ``begin``
+    :param default: Default value if one of ``begin`` or ``end`` is not
+                    found.  Defaults to an empty string.
+    :return: The string between the two search-strings ``begin`` and ``end``.
+             If at least one of ``begin`` or ``end`` is not found, the value of
+             ``default`` is returned.
+
+    Examples:
+      >>> extr("abcde", "a", "e")
+      "bcd"
+      >>> extr("abcde", "a", "z", deafult="nothing")
+      "nothing"
+
+    """
+
+    # From https://github.com/mikf/gallery-dl/blob/master/gallery_dl/text.py#L129
+
+    try:
+        first = txt.index(begin) + len(begin)
+        return txt[first : txt.index(end, first)]
+    except ValueError:
+        return default
 
 
 def int_or_zero(num: Union[List[str], str]) -> int:
