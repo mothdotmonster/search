@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-17 12:15+0000\n"
+"POT-Creation-Date: 2024-09-03 15:52+0000\n"
 "PO-Revision-Date: 2024-05-25 08:18+0000\n"
 "Last-Translator: krlsk <krlsk@users.noreply.translate.codeberg.org>\n"
 "Language: bg\n"
@@ -26,7 +26,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -314,17 +314,17 @@ msgid "author"
 msgstr "Автор"
 
 #. SOCIAL_MEDIA_TERMS['THREAD OPEN']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "open"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "closed"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
-#: searx/engines/discourse.py:132 searx/searxng.msg
+#: searx/engines/discourse.py:160 searx/searxng.msg
 msgid "answered"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr "Източник"
 msgid "Error loading the next page"
 msgstr "Грешка при зареждането на следващата страница"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:491 searx/webapp.py:894
 msgid "Invalid settings, please edit your preferences"
 msgstr "Неправилни настройки, моля проверете предпочитанията си"
 
@@ -417,19 +417,19 @@ msgstr "преди {minutes} минута(минути)"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "преди {hours} час(ове), {minutes} минута(минути)"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "Генератор на произволни стойности"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "Генерирайте различни произволни стойности"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "Функции за статистика"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "Изчислете {functions} на аргументите"
 
@@ -462,7 +462,7 @@ msgid "clicks"
 msgstr "клика"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "Език"
 
@@ -474,7 +474,7 @@ msgstr ""
 "{numCitations} цитати от годината {firstCitationVelocityYear} до "
 "{lastCitationVelocityYear}"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -484,7 +484,7 @@ msgstr ""
 "дължи на неподдържан файлов формат. TinEye поддържа само изображения, "
 "които са JPEG, PNG, GIF, BMP, TIFF или WebP."
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -493,15 +493,15 @@ msgstr ""
 "основно ниво на визуална детайлност за успешно идентифициране на "
 "съвпадения."
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "Снимката не може да бъде смъкната."
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "Рейтинг на книги"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "Качество на файл"
 
@@ -517,15 +517,11 @@ msgstr "Преобразува низове в различни хаш-извл�
 msgid "hash digest"
 msgstr "хеш извлечение"
 
-#: searx/plugins/hostname_replace.py:7
-msgid "Hostname replace"
-msgstr "Замяна на името на хоста"
-
-#: searx/plugins/hostnames.py:68
+#: searx/plugins/hostnames.py:103
 msgid "Hostnames plugin"
 msgstr ""
 
-#: searx/plugins/hostnames.py:69
+#: searx/plugins/hostnames.py:104
 msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
 msgstr ""
 
@@ -665,17 +661,21 @@ msgid "Length"
 msgstr "Дължина"
 
 #: searx/templates/simple/macros.html:36
+msgid "Views"
+msgstr ""
+
+#: searx/templates/simple/macros.html:37
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "Автор"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "cached"
 msgstr "кеширана"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "proxied"
 msgstr "прекарана"
 
@@ -707,7 +707,7 @@ msgstr ""
 msgid "No HTTPS"
 msgstr "Без HTTPS"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -788,19 +788,19 @@ msgstr "Брой резултати"
 msgid "Info"
 msgstr "Инф."
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "Пробвайте да потърсите:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "Обратно към началото"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "Предишна страница"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "Следваща страница"
 
@@ -840,6 +840,7 @@ msgstr "Резултати"
 msgid "Result count"
 msgstr "Брой резултати"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -915,17 +916,13 @@ msgstr "Коментар (и)"
 msgid "Download results"
 msgstr "Свали резултатите"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "Съобщения от търсачките"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "Грешка!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "Търсачките не можаха да намерят резултати"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr ""
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -950,12 +947,12 @@ msgstr "Предложения"
 msgid "Search language"
 msgstr "Език на търсене"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "Основен език"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "Автоматично разпознаване"
@@ -1939,4 +1936,13 @@ msgstr "скрий видеото"
 
 #~ msgid "TiB"
 #~ msgstr "терабайт"
+
+#~ msgid "Hostname replace"
+#~ msgstr "Замяна на името на хоста"
+
+#~ msgid "Error!"
+#~ msgstr "Грешка!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "Търсачките не можаха да намерят резултати"
 

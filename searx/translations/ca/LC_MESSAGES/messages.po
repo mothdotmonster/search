@@ -21,9 +21,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-17 12:15+0000\n"
-"PO-Revision-Date: 2024-04-06 00:18+0000\n"
-"Last-Translator: sserra <sserra@users.noreply.translate.codeberg.org>\n"
+"POT-Creation-Date: 2024-09-03 15:52+0000\n"
+"PO-Revision-Date: 2024-08-16 06:18+0000\n"
+"Last-Translator: return42 <return42@users.noreply.translate.codeberg.org>"
+"\n"
 "Language: ca\n"
 "Language-Team: Catalan "
 "<https://translate.codeberg.org/projects/searxng/searxng/ca/>\n"
@@ -31,7 +32,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -81,7 +82,7 @@ msgstr "radio"
 #. CATEGORY_NAMES['TV']
 #: searx/searxng.msg
 msgid "tv"
-msgstr ""
+msgstr "tv"
 
 #. CATEGORY_NAMES['IT']
 #: searx/searxng.msg
@@ -181,7 +182,7 @@ msgstr "Quant a"
 #. WEATHER_TERMS['AVERAGE TEMP.']
 #: searx/searxng.msg
 msgid "Average temp."
-msgstr ""
+msgstr "Temperatura mitjana"
 
 #. WEATHER_TERMS['CLOUD COVER']
 #: searx/searxng.msg
@@ -319,17 +320,17 @@ msgid "author"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD OPEN']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "open"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "closed"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
-#: searx/engines/discourse.py:132 searx/searxng.msg
+#: searx/engines/discourse.py:160 searx/searxng.msg
 msgid "answered"
 msgstr ""
 
@@ -346,7 +347,7 @@ msgstr "Origen"
 msgid "Error loading the next page"
 msgstr "S'ha produït un error en carregar la següent pàgina"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:491 searx/webapp.py:894
 msgid "Invalid settings, please edit your preferences"
 msgstr "La configuració no és vàlida, editeu-la"
 
@@ -422,19 +423,19 @@ msgstr "fa {minutes} minut(s)"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "fa {hours} hores i {minutes} minut(s)"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "Generador de valors aleatoris"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "Genera diferents valors aleatoris"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "Funcions estadístiques"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "Calcula {functions} dels arguments"
 
@@ -467,7 +468,7 @@ msgid "clicks"
 msgstr "clics"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "Llengua"
 
@@ -479,7 +480,7 @@ msgstr ""
 "{numCitations} cites des de l'any {firstCitationVelocityYear} fins a "
 "{lastCitationVelocityYear}"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -489,7 +490,7 @@ msgstr ""
 " de fitxer no compatible. TinEye només admet imatges en format JPEG, PNG,"
 " GIF, BMP, TIFF o WebP."
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -497,15 +498,15 @@ msgstr ""
 "La imatge és massa senzilla per trobar coincidències. TinEye requereix un"
 " mínim de complexitat visual per identificar amb èxit les coincidències."
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "No s'ha pogut baixar la imatge."
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "Valoració de llibre"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "Qualitat del fitxer"
 
@@ -521,15 +522,11 @@ msgstr "Converteix cadenes en diferents empremtes de hash."
 msgid "hash digest"
 msgstr "resum del hash"
 
-#: searx/plugins/hostname_replace.py:7
-msgid "Hostname replace"
-msgstr "Substitució del nom de l'amfitrió"
-
-#: searx/plugins/hostnames.py:68
+#: searx/plugins/hostnames.py:103
 msgid "Hostnames plugin"
 msgstr ""
 
-#: searx/plugins/hostnames.py:69
+#: searx/plugins/hostnames.py:104
 msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
 msgstr ""
 
@@ -672,17 +669,21 @@ msgid "Length"
 msgstr "Longitud"
 
 #: searx/templates/simple/macros.html:36
+msgid "Views"
+msgstr ""
+
+#: searx/templates/simple/macros.html:37
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "Autor"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "cached"
 msgstr "en memòria cau"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "proxied"
 msgstr "en servidor intermediari"
 
@@ -714,7 +715,7 @@ msgstr "Creeu una incidència a GitHub incloent la informació anterior"
 msgid "No HTTPS"
 msgstr "Sense HTTPS"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -795,19 +796,19 @@ msgstr "Nombre de resultats"
 msgid "Info"
 msgstr "Informació"
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "Proveu a cercar:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "Torna al capdemunt"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "Pàgina anterior"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "Pàgina següent"
 
@@ -847,6 +848,7 @@ msgstr "Valoració"
 msgid "Result count"
 msgstr "Resultats"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -922,17 +924,13 @@ msgstr "Comentaris"
 msgid "Download results"
 msgstr "Baixa els resultats"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "Missatges dels motors de cerca"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "Error!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "Els cercadors no poden obtenir cap resultat"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr ""
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -957,12 +955,12 @@ msgstr "Suggeriments"
 msgid "Search language"
 msgstr "Llengua de cerca"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "Llengua predeterminada"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "Detecció automàtica"
@@ -1956,4 +1954,13 @@ msgstr "oculta el vídeo"
 
 #~ msgid "TiB"
 #~ msgstr "TiB"
+
+#~ msgid "Hostname replace"
+#~ msgstr "Substitució del nom de l'amfitrió"
+
+#~ msgid "Error!"
+#~ msgstr "Error!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "Els cercadors no poden obtenir cap resultat"
 

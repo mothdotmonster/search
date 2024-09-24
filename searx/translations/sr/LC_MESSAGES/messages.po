@@ -10,23 +10,24 @@
 # SecularSteve <fairfull.playing@gmail.com>, 2022, 2023.
 # return42 <markus.heiser@darmarit.de>, 2023.
 # return42 <return42@users.noreply.translate.codeberg.org>, 2024.
+# crnobog <crnobog@users.noreply.translate.codeberg.org>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version:  searx\n"
+"Project-Id-Version: searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-17 12:15+0000\n"
-"PO-Revision-Date: 2024-04-18 13:18+0000\n"
-"Last-Translator: return42 <return42@users.noreply.translate.codeberg.org>"
-"\n"
+"POT-Creation-Date: 2024-09-03 15:52+0000\n"
+"PO-Revision-Date: 2024-09-05 06:18+0000\n"
+"Last-Translator: return42 <return42@users.noreply.translate.codeberg.org>\n"
+"Language-Team: Serbian <https://translate.codeberg.org/projects/searxng/"
+"searxng/sr/>\n"
 "Language: sr\n"
-"Language-Team: Serbian "
-"<https://translate.codeberg.org/projects/searxng/searxng/sr/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.7\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -76,7 +77,7 @@ msgstr "радио"
 #. CATEGORY_NAMES['TV']
 #: searx/searxng.msg
 msgid "tv"
-msgstr ""
+msgstr "телевизија"
 
 #. CATEGORY_NAMES['IT']
 #: searx/searxng.msg
@@ -176,62 +177,66 @@ msgstr "О нама"
 #. WEATHER_TERMS['AVERAGE TEMP.']
 #: searx/searxng.msg
 msgid "Average temp."
-msgstr ""
+msgstr "Просечна температура"
 
 #. WEATHER_TERMS['CLOUD COVER']
 #: searx/searxng.msg
 msgid "Cloud cover"
-msgstr ""
+msgstr "Облачност"
 
 #. WEATHER_TERMS['CONDITION']
 #: searx/searxng.msg
 msgid "Condition"
-msgstr ""
+msgstr "Стање"
 
 #. WEATHER_TERMS['CURRENT CONDITION']
 #: searx/searxng.msg
 msgid "Current condition"
-msgstr ""
+msgstr "Тренутно стање"
 
 #. WEATHER_TERMS['EVENING']
 #: searx/engines/wttr.py:100 searx/searxng.msg
+#, fuzzy
 msgid "Evening"
-msgstr "Vece"
+msgstr "Вече"
 
 #. WEATHER_TERMS['FEELS LIKE']
 #: searx/searxng.msg
 msgid "Feels like"
-msgstr ""
+msgstr "Осећај"
 
 #. WEATHER_TERMS['HUMIDITY']
 #: searx/searxng.msg
 msgid "Humidity"
-msgstr ""
+msgstr "Влажност"
 
 #. WEATHER_TERMS['MAX TEMP.']
 #: searx/searxng.msg
 msgid "Max temp."
-msgstr ""
+msgstr "Највећа темп."
 
 #. WEATHER_TERMS['MIN TEMP.']
 #: searx/searxng.msg
 msgid "Min temp."
-msgstr ""
+msgstr "Најмања темп."
 
 #. WEATHER_TERMS['MORNING']
 #: searx/engines/wttr.py:100 searx/searxng.msg
+#, fuzzy
 msgid "Morning"
-msgstr "Jutro"
+msgstr "Јутро"
 
 #. WEATHER_TERMS['NIGHT']
 #: searx/engines/wttr.py:100 searx/searxng.msg
+#, fuzzy
 msgid "Night"
-msgstr "Noc"
+msgstr "Ноћ"
 
 #. WEATHER_TERMS['NOON']
 #: searx/engines/wttr.py:100 searx/searxng.msg
+#, fuzzy
 msgid "Noon"
-msgstr "Podne"
+msgstr "Подне"
 
 #. WEATHER_TERMS['PRESSURE']
 #: searx/searxng.msg
@@ -314,17 +319,17 @@ msgid "author"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD OPEN']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "open"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "closed"
 msgstr ""
 
 #. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
-#: searx/engines/discourse.py:132 searx/searxng.msg
+#: searx/engines/discourse.py:160 searx/searxng.msg
 msgid "answered"
 msgstr ""
 
@@ -341,7 +346,7 @@ msgstr "Извор"
 msgid "Error loading the next page"
 msgstr "Грешка приликом учитавања следеће странице"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:491 searx/webapp.py:894
 msgid "Invalid settings, please edit your preferences"
 msgstr "Неважеће поставке, молимо уредите свој избор"
 
@@ -417,19 +422,19 @@ msgstr "пре {minutes} минут(у,е,а)"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "пре {hours} час(a) и {minutes} минут(у,е,а)"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "Генератор случајних вредности"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "Генеришите различите случајне вредности"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "Статистичке функције"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "Израчунајте {functions} аргумената"
 
@@ -462,7 +467,7 @@ msgid "clicks"
 msgstr "кликови"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "Језик"
 
@@ -474,7 +479,7 @@ msgstr ""
 "{numCitations} цитата од {{firstCitationVelocityYear} до "
 "{lastCitationVelocityYear} године"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -484,7 +489,7 @@ msgstr ""
 "формата датотеке. ТинЕие подржава само слике које су ЈПЕГ, ПНГ, ГИФ, БМП,"
 " ТИФФ или ВебП формата."
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -492,15 +497,15 @@ msgstr ""
 "Слика је превише једноставна за проналажење подударања. ТинЕие захтева "
 "основни ниво визуелних детаља да би успешно идентификовао подударања."
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "Није могуће преузети слику."
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "Оцена књиге"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "Квалитет датотеке"
 
@@ -516,15 +521,11 @@ msgstr "Претвара стринг у другачије хешеве."
 msgid "hash digest"
 msgstr "Излаз хеш функције"
 
-#: searx/plugins/hostname_replace.py:7
-msgid "Hostname replace"
-msgstr "Замени име хостинга"
-
-#: searx/plugins/hostnames.py:68
+#: searx/plugins/hostnames.py:103
 msgid "Hostnames plugin"
 msgstr ""
 
-#: searx/plugins/hostnames.py:69
+#: searx/plugins/hostnames.py:104
 msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
 msgstr ""
 
@@ -666,17 +667,21 @@ msgid "Length"
 msgstr "Дужина"
 
 #: searx/templates/simple/macros.html:36
+msgid "Views"
+msgstr ""
+
+#: searx/templates/simple/macros.html:37
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "Аутор"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "cached"
 msgstr "кеширано"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:45
 msgid "proxied"
 msgstr "прокси"
 
@@ -704,7 +709,7 @@ msgstr "Пријавите нову грешку на Гитхабу укључ�
 msgid "No HTTPS"
 msgstr "Нема HTTPS"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -785,19 +790,19 @@ msgstr "Број резултата"
 msgid "Info"
 msgstr "Информације"
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "Покушај да нађеш:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "Назад на врх"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "Претходна страница"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "Следећа страница"
 
@@ -837,6 +842,7 @@ msgstr "Резултати"
 msgid "Result count"
 msgstr "Број резултата"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -912,17 +918,13 @@ msgstr "Коментар(и)"
 msgid "Download results"
 msgstr "Резултати преузимања"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "Поруке из претраживача"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "Грешка!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "Не може повратити резултате"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr "s"
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -947,12 +949,12 @@ msgstr "Предлози"
 msgid "Search language"
 msgstr "Језик претраге"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "Подразумевани језик"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "Аутоматски откриј"
@@ -1932,3 +1934,11 @@ msgstr "сакриј видео"
 #~ msgid "TiB"
 #~ msgstr "TiB"
 
+#~ msgid "Hostname replace"
+#~ msgstr "Замени име хостинга"
+
+#~ msgid "Error!"
+#~ msgstr "Грешка!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "Не може повратити резултате"
