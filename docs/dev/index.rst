@@ -7,7 +7,6 @@ Developer documentation
 
    quickstart
    commits
-   rtm_asdf
    contribution_guide
    extended_types
    engines/index
@@ -17,7 +16,6 @@ Developer documentation
    plugins/index
    answerers/index
    translation
-   lxcdev
    makefile
    reST
    searxng_extra/index

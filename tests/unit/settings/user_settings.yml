@@ -1,6 +1,6 @@
 general:
   debug: false
-  instance_name: "searx"
+  instance_name: "SearXNG"
 
 search:
   safe_search: 0
@@ -36,6 +36,9 @@ plugins:
 
   searx.plugins.calculator.SXNGPlugin:
     active: true
+
+  searx.plugins.infinite_scroll.SXNGPlugin:
+    active: false
 
   searx.plugins.hash_plugin.SXNGPlugin:
     active: true

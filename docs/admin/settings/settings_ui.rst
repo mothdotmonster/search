@@ -10,10 +10,8 @@
 .. code:: yaml
 
    ui:
-     static_use_hash: false
      default_locale: ""
      query_in_title: false
-     infinite_scroll: false
      center_alignment: false
      cache_url: https://web.archive.org/web/
      default_theme: simple
@@ -23,23 +21,15 @@
      hotkeys: default
      url_formatting: pretty
 
-.. _static_use_hash:
-
-``static_use_hash`` : ``$SEARXNG_STATIC_USE_HASH``
-  Enables `cache busting`_ of static files.
-
 ``default_locale`` :
   SearXNG interface language.  If blank, the locale is detected by using the
   browser language.  If it doesn't work, or you are deploying a language
-  specific instance of searx, a locale can be defined using an ISO language
+  specific instance of SearXNG, a locale can be defined using an ISO language
   code, like ``fr``, ``en``, ``de``.
 
 ``query_in_title`` :
   When true, the result page's titles contains the query it decreases the
   privacy, since the browser can records the page titles.
-
-``infinite_scroll``:
-  When true, automatically loads the next page when scrolling to bottom of the current page.
 
 ``center_alignment`` : default ``false``
   When enabled, the results are centered instead of being in the left (or RTL)

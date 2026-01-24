@@ -10,36 +10,30 @@ engines:
 - :ref:`google autocomplete`
 
 """
-from __future__ import annotations
 
-from typing import TYPE_CHECKING
+import typing as t
 
 import re
 import random
 import string
 import time
-from urllib.parse import urlencode
+from urllib.parse import urlencode, unquote
 from lxml import html
 import babel
 import babel.core
 import babel.languages
 
-from searx.utils import extract_text, eval_xpath, eval_xpath_list, eval_xpath_getindex
+from searx.utils import extract_text, eval_xpath, eval_xpath_list, eval_xpath_getindex, gen_gsa_useragent
 from searx.locales import language_tag, region_tag, get_official_locales
 from searx.network import get  # see https://github.com/searxng/searxng/issues/762
 from searx.exceptions import SearxEngineCaptchaException
 from searx.enginelib.traits import EngineTraits
 from searx.result_types import EngineResults
 
-if TYPE_CHECKING:
-    import logging
+if t.TYPE_CHECKING:
+    from searx.extended_types import SXNG_Response
+    from searx.search.processors import OnlineParams
 
-    logger: logging.Logger
-
-traits: EngineTraits
-
-
-# about
 about = {
     "website": 'https://www.google.com',
     "wikidata_id": 'Q9366',
@@ -70,7 +64,7 @@ filter_mapping = {0: 'off', 1: 'medium', 2: 'high'}
 
 # Suggestions are links placed in a *card-section*, we extract only the text
 # from the links not the links itself.
-suggestion_xpath = '//div[contains(@class, "EIaa9b")]//a'
+suggestion_xpath = '//div[contains(@class, "ouy7Mc")]//a'
 
 
 _arcid_range = string.ascii_letters + string.digits + "_-"
@@ -99,7 +93,7 @@ def ui_async(start: int) -> str:
     return ",".join([arc_id, use_ac, _fmt])
 
 
-def get_google_info(params, eng_traits):
+def get_google_info(params: "OnlineParams", eng_traits: EngineTraits) -> dict[str, t.Any]:
     """Composing various (language) properties for the google engines (:ref:`google
     API`).
 
@@ -154,7 +148,7 @@ def get_google_info(params, eng_traits):
 
     """
 
-    ret_val = {
+    ret_val: dict[str, t.Any] = {
         'language': None,
         'country': None,
         'subdomain': None,
@@ -268,6 +262,7 @@ def get_google_info(params, eng_traits):
     # HTTP headers
 
     ret_val['headers']['Accept'] = '*/*'
+    ret_val['headers']['User-Agent'] = gen_gsa_useragent()
 
     # Cookies
 
@@ -283,7 +278,7 @@ def detect_google_sorry(resp):
         raise SearxEngineCaptchaException()
 
 
-def request(query, params):
+def request(query: str, params: "OnlineParams") -> None:
     """Google search request"""
     # pylint: disable=line-too-long
     start = (params['pageno'] - 1) * 10
@@ -327,7 +322,6 @@ def request(query, params):
 
     params['cookies'] = google_info['cookies']
     params['headers'].update(google_info['headers'])
-    return params
 
 
 # =26;[3,"dimg_ZNMiZPCqE4apxc8P3a2tuAQ_137"]a87;data:image/jpeg;base64,/9j/4AAQSkZJRgABA
@@ -351,7 +345,7 @@ def parse_data_images(text: str):
     return data_image_map
 
 
-def response(resp) -> EngineResults:
+def response(resp: "SXNG_Response"):
     """Get response from google's search request"""
     # pylint: disable=too-many-branches, too-many-statements
     detect_google_sorry(resp)
@@ -362,35 +356,24 @@ def response(resp) -> EngineResults:
     # convert the text to dom
     dom = html.fromstring(resp.text)
 
-    # results --> answer
-    answer_list = eval_xpath(dom, '//div[contains(@class, "LGOjhe")]')
-    for item in answer_list:
-        for bubble in eval_xpath(item, './/div[@class="nnFGuf"]'):
-            bubble.drop_tree()
-        results.add(
-            results.types.Answer(
-                answer=extract_text(item),
-                url=(eval_xpath(item, '../..//a/@href') + [None])[0],
-            )
-        )
-
     # parse results
 
-    for result in eval_xpath_list(dom, './/div[contains(@jscontroller, "SC7lYd")]'):
+    for result in eval_xpath_list(dom, './/div[contains(@class, "MjjYud")]'):
         # pylint: disable=too-many-nested-blocks
 
         try:
-            title_tag = eval_xpath_getindex(result, './/a/h3[1]', 0, default=None)
+            title_tag = eval_xpath_getindex(result, './/div[contains(@role, "link")]', 0, default=None)
             if title_tag is None:
                 # this not one of the common google results *section*
                 logger.debug('ignoring item from the result_xpath list: missing title')
                 continue
             title = extract_text(title_tag)
 
-            url = eval_xpath_getindex(result, './/a[h3]/@href', 0, None)
-            if url is None:
+            raw_url = eval_xpath_getindex(result, './/a/@href', 0, None)
+            if raw_url is None:
                 logger.debug('ignoring item from the result_xpath list: missing url of title "%s"', title)
                 continue
+            url = unquote(raw_url[7:].split('&sa=U')[0])  # remove the google redirector
 
             content_nodes = eval_xpath(result, './/div[contains(@data-sncf, "1")]')
             for item in content_nodes:

@@ -1,8 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 """Mojeek (general, images, news)"""
 
-from typing import TYPE_CHECKING
-
 from datetime import datetime
 from urllib.parse import urlencode
 from lxml import html
@@ -50,13 +48,6 @@ region_param = 'arc'
 
 _delta_kwargs = {'day': 'days', 'week': 'weeks', 'month': 'months', 'year': 'years'}
 
-if TYPE_CHECKING:
-    import logging
-
-    logger = logging.getLogger()
-
-traits: EngineTraits
-
 
 def init(_):
     if search_type not in ('', 'images', 'news'):
@@ -74,7 +65,8 @@ def request(query, params):
     if search_type:
         args['fmt'] = search_type
 
-    if search_type == '':
+    # setting the page number on the first page (i.e. s=0) triggers a rate-limit
+    if search_type == '' and params['pageno'] > 1:
         args['s'] = 10 * (params['pageno'] - 1)
 
     if params['time_range'] and search_type != 'images':
